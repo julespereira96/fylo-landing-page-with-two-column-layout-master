@@ -1,0 +1,417 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &_logo {
+    &_image {
+      @media only screen and (max-width: $bp-largest) {
+        width: 80px;
+      }
+    }
+  }
+
+  &_features {
+    &_list {
+      padding-left: 3rem;
+      font-size: 1.5rem;
+      color: var(--Desaturated-Blue);
+      text-decoration: none;
+
+      @media only screen and (max-width: $bp-largest) {
+        width: 80px;
+      }
+      @media only screen and (max-width: $bp-large) {
+        font-size: 1.2rem;
+        width: 80px;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 25rem;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  &_header {
+    flex: 0 0 45%;
+    &_text {
+      font-size: 4rem;
+      color: var(--Very-Dark-Blue);
+
+      @media only screen and (max-width: $bp-largest) {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+
+    &_tag {
+      margin: 2.5rem 0;
+      font-size: 1.5rem;
+      color: var(--Desaturated-Blue);
+      width: 35vw;
+      @media only screen and (max-width: $bp-largest) {
+        margin: 2rem auto;
+        width: 70vw;
+        text-align: center;
+      }
+    }
+
+    &_input {
+      display: flex;
+      @media only screen and (max-width: $bp-largest) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &_image {
+    &_illustration {
+      width: 45vw;
+      @media only screen and (max-width: $bp-large) {
+        width: 250px;
+      }
+      @media only screen and (max-width: $bp-small) {
+        width: 190px;
+      }
+    }
+  }
+}
+
+.about {
+  position: relative;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 5rem 7rem;
+  display: flex;
+  align-items: center;
+  height: 110vh;
+  justify-content: space-between;
+  z-index: 2;
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column-reverse;
+    height: 150vh;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -100px;
+    left: 0;
+    height: 114px;
+    width: 100%;
+    background-size: 100% 100%;
+    background-image: url(/images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+  }
+
+  &_image {
+    &_link {
+      @media only screen and (max-width: $bp-largest) {
+        text-align: center;
+      }
+
+      &_content {
+        color: var(--Moderate-Cyan);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 1px solid var(--Moderate-Cyan);
+        padding: 0.4rem 1rem;
+      }
+
+      &_arrow {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &_illustration {
+    z-index: 1;
+    @media only screen and (max-width: $bp-largest) {
+      margin-bottom: 8rem;
+    }
+    &_image {
+      width: 40vw;
+      @media only screen and (max-width: $bp-largest) {
+        width: 80vw;
+      }
+    }
+  }
+}
+
+.card {
+  margin-top: 5rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 4rem 3rem;
+  max-width: 400px;
+  position: relative;
+  @media only screen and (max-width: $bp-largest) {
+    margin: 2rem auto;
+    max-width: 300px;
+    max-height: 200vh;
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: 0.8rem;
+    left: 2.6rem;
+    line-height: 1;
+    font-size: 7rem;
+    color: var(--color-Grey-light-2);
+    font-family: sans-serif;
+    z-index: 1;
+  }
+
+  &_testimonial {
+    font-size: 1.5rem;
+    color: var(--Very-Dark-Blue);
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1rem;
+    }
+
+    &_info {
+      align-self: flex-start;
+      margin-top: 2rem;
+      display: flex;
+      &_user {
+        @media only screen and (max-width: $bp-largest) {
+          font-size: 1rem;
+        }
+      }
+
+      &_image {
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        @media only screen and (max-width: $bp-small) {
+          width: 30px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.access {
+  background-color: var(--Desaturated-Blue);
+  padding: 12rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+
+  &_text {
+    &_main {
+      color: var(--white);
+      font-size: 3rem;
+      @media only screen and (max-width: $bp-largest) {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+    }
+
+    &_tag {
+      color: var(--white);
+      font-size: 1.5rem;
+      width: 30vw;
+      padding: 1.5rem 0;
+      @media only screen and (max-width: $bp-largest) {
+        font-size: 1.5rem;
+        margin: 0 auto;
+        width: 80vw;
+      }
+    }
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}
+
+.footer {
+  background-color: var(--Very-Dark-Blue);
+  height: 80vh;
+  padding: 8rem 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: $bp-small) {
+    padding: 8rem 3rem;
+  }
+  @media only screen and (max-width: $bp-max) {
+    height: 120vh;
+  }
+
+  &_logo {
+    &_image {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &_info {
+    color: var(--white);
+    font-weight: lighter;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-max) {
+      flex-direction: column;
+    }
+
+    &_content {
+      &_number {
+        padding: 1.5rem 0;
+      }
+
+      &_number::before {
+        content: url(/images/icon-phone.svg);
+        padding-right: 1.5rem;
+        height: 10px;
+      }
+
+      &_mail::before {
+        content: url(/images/icon-email.svg);
+        padding-right: 1.5rem;
+        height: 10px;
+      }
+    }
+
+    &_list {
+      display: flex;
+      padding: 1.5rem 0;
+      @media only screen and (max-width: $bp-max) {
+        display: inline-block;
+      }
+      &_content {
+        list-style: none;
+        font-size: 1.5rem;
+        padding: 0 10rem;
+        @media only screen and (max-width: $bp-max) {
+          padding: 1.5rem 0;
+        }
+      }
+    }
+
+    &_socials {
+      margin-top: -4rem;
+      @media only screen and (max-width: $bp-max) {
+        margin: -2rem auto;
+      }
+      &_logo {
+        width: 30px;
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.signup {
+  display: flex;
+  align-items: flex-start;
+  @media only screen and (max-width: $bp-largest) {
+    display: block;
+  }
+}
+
+input,
+button {
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 450px;
+  padding: 0.8rem 1.6rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+input[name="signup_mail"] {
+  font-size: 13px;
+  border-color: var(--Very-Dark-Blue);
+  color: var(--Light-Gray);
+  margin-bottom: 1.2rem;
+}
+
+button[name="signup_button"] {
+  border-color: var(--Bright-Blue);
+  box-shadow: 0px 1px 5px 1px var(--Light-Gray);
+  width: 200px;
+  margin-left: 2rem;
+  @media only screen and (max-width: $bp-largest) {
+    width: 95%;
+    margin: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--bright-blue);
+  }
+}
+
+button {
+  color: white;
+  background-color: var(--Bright-Blue);
+}
+
+input[name="access_signup"] {
+  font-size: 13px;
+  border-color: var(--Very-Dark-Blue);
+  color: var(--Light-Gray);
+  margin-bottom: 1.2rem;
+}
+
+button[name="button_signup"] {
+  border-color: var(--Bright-Blue);
+  box-shadow: 0px 1px 10px -1px rgba(0, 0, 0, 0.75);
+
+  width: 200px;
+  @media only screen and (max-width: $bp-largest) {
+    width: 95%;
+    margin: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--Light-Gray);
+  }
+}
+
+.footer_link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 1.5rem;
+  margin: 10rem auto;
+  @media only screen and (max-width: $bp-max) {
+    font-size: 1rem;
+  }
+}
+
+.footer-content {
+  @media only screen and (max-width: $bp-max) {
+    padding-top: 10rem;
+  }
+}
